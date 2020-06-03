@@ -63,10 +63,12 @@ static const char *duck[] = {"surf", "duck.com"};
 static const char *archwiki[] = {"surf", "wiki.archlinux.org"};
 static const char *chan[] = {"surf", "4chan.org"};
 
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY/*|ShiftMask*/,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_o,      spawn,          SHCMD("bash ~/scripts/quick.sh") },
+	{ MODKEY/*|ShiftMask*/,         XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
