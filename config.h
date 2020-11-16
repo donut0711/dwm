@@ -1,10 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pix*/
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
-static const unsigned int gappx     = 5; 
+static const unsigned int gappx     = 15; 
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
@@ -88,6 +88,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_d,	   spawn,	   SHCMD("surf duckduckgo.com" ) },
 	{ MODKEY|ShiftMask,		XK_a,	   spawn,	   SHCMD("surf wiki.archlinux.org") },
+
+	{ MODKEY|ShiftMask,		XK_Up,	   spawn,	   SHCMD("setxkbmap dvorak" ) },
+	{ MODKEY|ShiftMask,		XK_Down,   spawn,	   SHCMD("setxkbmap us" ) },
+
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
